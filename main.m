@@ -7,6 +7,7 @@ col_header = ['    ', '      0(1)', '      0(2)', '      1(1)', '      1(2)',...
                 '      2(1)', '      2(2)', '      3(1)', '      3(2)'...
                 '      4(1)', '      4(2)', '      5(1)', '      5(2)'];
 
+%% compute distance
 for i = 0 : 5
     row_header(i + 1, 1) = {sprintf('%d(1)', i)};
     for j = 0 : 5
@@ -48,6 +49,8 @@ for i = 0 : 5
         end
     end
 end
+
+%% output result
 filename = 'result.txt';
 fout = fopen(filename, 'w');
 fprintf(fout, col_header);
